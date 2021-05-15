@@ -13,6 +13,7 @@
     <modules>
         <module>moduleB</module>
         <module>moduleC</module>
+        <module>moduleD</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
