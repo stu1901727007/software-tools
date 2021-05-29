@@ -7,14 +7,20 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.time.Instant;
+import java.util.HashMap;
+import java.util.Map;
 
 @RestController
 public class IndexController {
 
     @GetMapping("/")
     @ResponseStatus(HttpStatus.OK)
-    public String getCurrentTime() {
+    public Map<String, String> getCurrentTime() {
 
-        return Instant.now().toString();
+        HashMap<String, String> map = new HashMap<>();
+        map.put("name", "Vitali Atias");
+        map.put("id", "1901727007");
+        map.put("date", Instant.now().toString());
+        return map;
     }
 }
